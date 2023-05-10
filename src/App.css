@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    font-family: "Space Grotesk" "sans-serif";
+}
+
+a {
+    text-transform: unset;
+}
+
+nav li a,
+p,
+h1 {
+    color: black
+}
+
+nav,
+.desktop-hero,
+.partners,
+.services {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.translate {
+    transform: translateX(100%);
+}
+
+.overlay {
+    backdrop-filter: blur(10px);
+}
+
+nav {
+    overflow: hidden;
+}
+
+nav li {
+    position: relative;
+    transition: all .2s linear;
+
+}
+
+nav li:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 5px;
+    background-color: #b9ff66;
+}
+
+.hero-mobile {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.hero-mobile p,
+.hero-mobile h1 {
+    color: black;
+}
+
+.hero-mobile a {
+    color: white;
+}
+
+.mobile-menu,
+.nav-items {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+    transition: all .2s linear;
+
+}
+
+.partners {
+    display: grid;
+    width: 100%;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+.partners div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partners div img {
+    filter: grayscale(10);
+}
+
+.partners div img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+
+}
+
+.slideshow {
+    width: 100%;
+    height: 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+.images {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 300%;
+    animation: slideshow 10s linear infinite;
+    transform: translate3d(0, 0, 0);
+}
+
+.services-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 50px;
+}
+
+@keyframes slideshow {
+    0% {
+        left: 30px;
+    }
+
+    25% {
+        left: -100%;
+    }
+
+    50% {
+        left: 30px;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+
+@media(min-width:768px) {
+    .hero-mobile {
+        height: 80vh;
+    }
+
+    .partners {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
