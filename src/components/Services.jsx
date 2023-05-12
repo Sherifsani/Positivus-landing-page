@@ -2,15 +2,17 @@ export default function Services() {
   function ServiceCard({ id, text, bg, accent, arrow }) {
     return (
       <div
-        className={`service-card w-full h-[300px] bg-[${bg}] p-10 flex flex-col justify-between rounded-3xl border-[1px] border-b-[3px] border-black`}
+        className={`service-card w-full h-[300px] bg-[${bg}] p-10 flex flex-col justify-between rounded-[40px] border-[1px] border-b-[5px] border-black`}
       >
         <div className="text">
-          <h3 className={`w-[60%] text-black bg-[${accent}] text-lg font-bold`}>
+          <h3
+            className={`w-[60%] text-black bg-[${accent}] text-lg font-bold lg:text-2xl`}
+          >
             {text}
           </h3>
         </div>
         <div className="illustrations flex justify-between w-full items-end">
-          <div className="arrow">
+          <div className="arrow hover:translate-y-[-10%] transition-transform cursor-pointer">
             <img src={`./public/images/services/arrow-${arrow}.svg`} alt="" />
           </div>
           <div className="image">
@@ -80,7 +82,7 @@ export default function Services() {
 
   return (
     <section className="services p-4">
-      <div className="services-head  flex flex-col gap-4 items-center md:flex-row">
+      <div className="services-head mb-5 flex flex-col gap-4 items-center md:flex-row">
         <h2 className="text-4xl text-black bg-[#b9ff66]">Services</h2>
         <p className="text-md text-center md:text-start">
           At our digital marketing agency, we offer a range of services

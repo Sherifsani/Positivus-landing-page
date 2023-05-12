@@ -20,7 +20,8 @@ h1 {
 nav,
 .desktop-hero,
 .partners,
-.services {
+.services,
+.second-hero {
     max-width: 1400px;
     margin: 0 auto;
 }

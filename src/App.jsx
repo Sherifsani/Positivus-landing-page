@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Partners from "./components/Partners";
 import Services from "./components/Services";
+import SecondHero from "./components/SecondHero";
 
 export default function App() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -17,6 +18,7 @@ export default function App() {
       <HeroSection />
       <Partners />
       <Services />
+      <SecondHero />
     </main>
   );
 }
