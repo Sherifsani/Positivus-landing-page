@@ -1,6 +1,6 @@
 function Navbar({ toggleMenu, openMenu }) {
   return (
-    <nav className="navbar p-4 justify-between relative h-[10vh] md:px-6">
+    <nav className="navbar z-30 p-4 justify-between relative h-[10vh] md:px-6">
       <div className="flex justify-between w-full">
         <a href="/" className="h-[25px] ">
           <svg
@@ -116,7 +116,7 @@ function Navbar({ toggleMenu, openMenu }) {
     return (
       <>
         <div
-          className={`overlay md:hidden transition-all duration-300  w-[30%] h-[100vh] bg-[rgba(0,0,0,0.5)] absolute ${open} top-0 left-0`}
+          className={`overlay z-30 md:hidden transition-all duration-300  w-[30%] h-[100vh] bg-[rgba(0,0,0,0.5)] absolute ${open} top-0 left-0`}
         ></div>
         <div
           className={`mobile-menu md:hidden translate absolute h-full w-[70%] z-30 p-5  top-0 right-0 ${

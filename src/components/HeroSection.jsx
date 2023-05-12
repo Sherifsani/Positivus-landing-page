@@ -1,7 +1,7 @@
 function HeroSection() {
   return (
     <>
-      <section className="hero-mobile gap-6 w-[100%] p-4 items-center md:px-20 md:hidden">
+      <section className="hero-mobile -z-10 gap-6 w-[100%] p-4 items-center md:px-20 md:hidden">
         <h1 className="text-3xl font-bold md:text-5xl">
           Navigating the digital landscape for success
         </h1>

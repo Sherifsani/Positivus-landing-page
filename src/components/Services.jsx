@@ -1,14 +1,15 @@
 export default function Services() {
-  function ServiceCard({ id, text, bg, accent, arrow }) {
+  function ServiceCard({ id, text, text2, bg, accent, arrow }) {
     return (
       <div
-        className={`service-card w-full h-[300px] bg-[${bg}] p-10 flex flex-col justify-between rounded-[40px] border-[1px] border-b-[5px] border-black`}
+        className={`service-card w-full h-[300px] bg-[${bg}] p-10 flex flex-col justify-between items-start rounded-[40px] border-[1px] border-b-[5px] border-black`}
       >
         <div className="text">
           <h3
-            className={`w-[60%] text-black bg-[${accent}] text-lg font-bold lg:text-2xl`}
+            className={`w-[unset] text-black  text-lg font-bold lg:text-2xl`}
           >
-            {text}
+            <span className={`bg-[${accent}]`}> {text}</span> <br />
+            <span className={`bg-[${accent}]`}> {text2}</span>
           </h3>
         </div>
         <div className="illustrations flex justify-between w-full items-end">
@@ -28,42 +29,48 @@ export default function Services() {
   const servicesData = [
     {
       id: 1,
-      text: "Search engine optimization",
+      text: "Search engine",
+      text2: "optimization",
       bg: "#f3f3f3",
       accent: "#b9ff66",
       arrow: "dark",
     },
     {
       id: 2,
-      text: "Pay-per-click advertising",
+      text: "Pay-per-click ",
+      text2: "advertising",
       bg: "#b9ff66",
       accent: "#f3f3f3",
       arrow: "dark",
     },
     {
       id: 3,
-      text: "Social Media Marketing",
+      text: "Social Media",
+      text2: "Marketing",
       bg: "#191A23",
       accent: "#f3f3f3",
       arrow: "light",
     },
     {
       id: 4,
-      text: "Email Marketing",
+      text: "Email",
+      text2: " Marketing",
       bg: "#f3f3f3",
       accent: "#b9ff66",
       arrow: "dark",
     },
     {
       id: 5,
-      text: "Content Creation",
+      text: "Content",
+      text2: "Creation",
       bg: "#b9ff66",
       accent: "#f3f3f3",
       arrow: "dark",
     },
     {
       id: 6,
-      text: "Analytics and Tracking",
+      text: "Analytics and",
+      text2: "Tracking",
       bg: "#191A23",
       accent: "#f3f3f3",
       arrow: "light",
@@ -74,6 +81,7 @@ export default function Services() {
     <ServiceCard
       id={card.id}
       text={card.text}
+      text2={card.text2}
       bg={card.bg}
       accent={card.accent}
       arrow={card.arrow}

@@ -7,6 +7,12 @@
     font-family: "Space Grotesk" "sans-serif";
 }
 
+h1,
+h2,
+h3 {
+    color: black;
+}
+
 a {
     text-transform: unset;
 }
@@ -21,7 +27,8 @@ nav,
 .desktop-hero,
 .partners,
 .services,
-.second-hero {
+.second-hero,
+.case {
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -143,6 +150,14 @@ nav li:hover::after {
     100% {
         left: 100%;
     }
+}
+
+.swiper-slide {
+    margin-top: 50px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #b9ff66 !important;
 }
 
 
